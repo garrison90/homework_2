@@ -1,0 +1,31 @@
+li {
+  display: flex;
+  background: rgba(5, 8, 187, 0.2);
+  padding: 10px 20px;
+  color: #fff;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.name {
+  width: 125px;
+}
+
+.surname {
+  width: 165px;
+}
+
+.phone {
+  width: 175px;
+}
+
+.icon {
+  width: 55px;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: rebeccapurple;
+  transform: scale(1.05);
+}

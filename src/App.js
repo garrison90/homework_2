@@ -35,8 +35,10 @@ export default class App extends Component {
   };
 
   addNewContact = (newContact) => {
+    let contact = newContact;
+    contact.id = Date.now();
     this.setState({
-      items: [...this.state.items, newContact],
+      items: [...this.state.items, contact],
       show: false,
     });
   };

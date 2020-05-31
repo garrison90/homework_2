@@ -69,7 +69,7 @@ export default class Modal extends Component {
     const { name, surname, phone } = this.state;
     const isValid = this.validate();
     if (isValid) {
-      const newContact = { name, surname, phone, id: Date.now };
+      const newContact = { name, surname, phone };
       this.props.addNewContact(newContact);
       this.setState(initialState);
     }
@@ -89,7 +89,7 @@ export default class Modal extends Component {
             value={this.state.name}
             onChange={this.handleChange}
             placeholder="Enter name..."
-            className={this.state.nameError ? "txtb error" : "txtb"}
+            className={`txtb ${this.state.nameError ? "error" : ""}`}
           />
 
           <input
@@ -97,7 +97,7 @@ export default class Modal extends Component {
             value={this.state.surname}
             onChange={this.handleChange}
             placeholder="Enter surname..."
-            className={this.state.surnameError ? "txtb error" : "txtb"}
+            className={`txtb ${this.state.surnameError ? "error" : ""}`}
           />
 
           <input
@@ -105,7 +105,7 @@ export default class Modal extends Component {
             value={this.state.phone}
             onChange={this.handleChange}
             placeholder="Enter pnone..."
-            className={this.state.phoneError ? "txtb error" : "txtb"}
+            className={`txtb ${this.state.phoneError ? "error" : ""}`}
           />
 
           <button className="add-form-btn" disabled={this.state.disabledButton}>
